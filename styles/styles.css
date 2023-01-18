@@ -12,6 +12,7 @@ html {
 body {
   margin: 0;
   font-family: "Plus Jakarta Sans", sans-serif;
+  overflow: auto;
 }
 
 header,
@@ -48,9 +49,12 @@ main {
   line-height: 18px;
   text-align: right;
   color: #5e6778;
-  text-decoration: none;
+  cursor: pointer;
 }
 
+main {
+  margin-bottom: 30px;
+}
 main .card + .card {
   margin-top: 10px;
 }
@@ -90,6 +94,16 @@ main .card__text--chess {
   line-height: 18px;
   color: #0a327b;
   text-decoration: none;
+}
+main .card__text--dot::after {
+  display: inline-block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f65552;
+  margin-left: 6px;
+  margin-bottom: 1px;
 }
 main .card__time {
   margin-top: 3px;
