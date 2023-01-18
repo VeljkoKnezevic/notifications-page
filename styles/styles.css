@@ -28,15 +28,15 @@ main {
 }
 .header__heading {
   font-weight: 800;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 1.25rem;
+  line-height: 1.563rem;
   color: #1c202b;
 }
 .header__number {
   margin-left: 10px;
   font-weight: 800;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   color: #ffffff;
   padding: 4px 11px;
   background: #0a327b;
@@ -45,11 +45,14 @@ main {
 .header__link {
   margin-left: auto;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   text-align: right;
   color: #5e6778;
   cursor: pointer;
+}
+.header__link:hover {
+  color: #0a327b;
 }
 
 main {
@@ -71,27 +74,35 @@ main .card__content {
 }
 main .card__text {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   color: #5e6778;
 }
 main .card__text--name {
   font-weight: 800;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   color: #1c202b;
+  cursor: pointer;
+}
+main .card__text--name:hover {
+  color: #0a327b;
 }
 main .card__text--link {
   font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   color: #5e6778;
   text-decoration: none;
+  cursor: pointer;
+}
+main .card__text--link:hover {
+  color: #0a327b;
 }
 main .card__text--chess {
   font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   color: #0a327b;
   text-decoration: none;
 }
@@ -108,19 +119,23 @@ main .card__text--dot::after {
 main .card__time {
   margin-top: 3px;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   color: #939cad;
 }
 main .card__private {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
   color: #5e6778;
   padding: 16px;
   background: #ffffff;
   border: 1px solid #dde7ee;
   border-radius: 5px;
+  cursor: pointer;
+}
+main .card__private:hover {
+  background: #e5effa;
 }
 main .card__attached-img {
   border-radius: 7px;

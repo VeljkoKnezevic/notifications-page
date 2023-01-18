@@ -1,3 +1,11 @@
+$blue: #0a327b;
+$red: #f65552;
+$very-dark-grey-blue: #1c202b;
+$dark-grey-blue: #5e6778;
+$grey-blue: #939cad;
+$light-grey-blue: #e5effa;
+$very-light-grey-blue: #dde7ee;
+
 html {
   box-sizing: border-box;
   font-size: 100%;
@@ -28,30 +36,34 @@ main {
 
   &__heading {
     font-weight: 800;
-    font-size: 20px;
-    line-height: 25px;
-    color: #1c202b;
+    font-size: 1.25rem;
+    line-height: 1.563rem;
+    color: $very-dark-grey-blue;
   }
 
   &__number {
     margin-left: 10px;
     font-weight: 800;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     color: #ffffff;
     padding: 4px 11px;
-    background: #0a327b;
+    background: $blue;
     border-radius: 6px;
   }
 
   &__link {
     margin-left: auto;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
     text-align: right;
-    color: #5e6778;
+    color: $dark-grey-blue;
     cursor: pointer;
+
+    &:hover {
+      color: $blue;
+    }
   }
 }
 
@@ -77,30 +89,38 @@ main {
 
     &__text {
       font-weight: 500;
-      font-size: 14px;
-      line-height: 18px;
-      color: #5e6778;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+      color: $dark-grey-blue;
 
       &--name {
         font-weight: 800;
-        font-size: 14px;
-        line-height: 18px;
-        color: #1c202b;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        color: $very-dark-grey-blue;
+        cursor: pointer;
+        &:hover {
+          color: $blue;
+        }
       }
 
       &--link {
         font-weight: 700;
-        font-size: 14px;
-        line-height: 18px;
-        color: #5e6778;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        color: $dark-grey-blue;
         text-decoration: none;
+        cursor: pointer;
+        &:hover {
+          color: $blue;
+        }
       }
 
       &--chess {
         font-weight: 700;
-        font-size: 14px;
-        line-height: 18px;
-        color: #0a327b;
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+        color: $blue;
         text-decoration: none;
       }
 
@@ -111,7 +131,7 @@ main {
           width: 8px;
           height: 8px;
           border-radius: 50%;
-          background: #f65552;
+          background: $red;
           margin-left: 6px;
           margin-bottom: 1px;
         }
@@ -121,20 +141,24 @@ main {
     &__time {
       margin-top: 3px;
       font-weight: 500;
-      font-size: 14px;
-      line-height: 18px;
-      color: #939cad;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+      color: $grey-blue;
     }
 
     &__private {
       font-weight: 500;
-      font-size: 14px;
-      line-height: 18px;
-      color: #5e6778;
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+      color: $dark-grey-blue;
       padding: 16px;
       background: #ffffff;
-      border: 1px solid #dde7ee;
+      border: 1px solid $very-light-grey-blue;
       border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        background: $light-grey-blue;
+      }
     }
 
     &__attached-img {

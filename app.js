@@ -1,16 +1,16 @@
-const addUnreadStyling = (() => {
-  const cards = document.querySelectorAll(".card");
+const addUnreadStyling = (cards) => {
   cards.forEach((card) => {
     const cardText = card.children[1].children[0];
+
     if (card.classList.contains("unread")) {
       card.style.backgroundColor = "#F7FAFD";
+      //Adds the orange dot if not read
       cardText.classList.add("card__text--dot");
     }
   });
-})();
+};
 
-const countUnread = () => {
-  const cards = document.querySelectorAll(".card");
+const countUnread = (cards) => {
   let counter = 0;
 
   cards.forEach((card) => {
@@ -22,23 +22,31 @@ const countUnread = () => {
   return counter;
 };
 
-const displayUnread = (() => {
-  const number = document.querySelector(".header__number");
+//Displays the nubmer in the header
+const displayUnreadTotal = (cards, unreadTotal) => {
+  unreadTotal.textContent = countUnread(cards);
+};
 
-  number.textContent = countUnread();
-})();
+const handleUnread = (() => {
+  const cards = document.querySelectorAll(".card");
+  const unreadTotal = document.querySelector(".header__number");
+  const markRead = document.querySelector(".header__link");
 
-const button = document.querySelector(".header__link");
-const cards = document.querySelectorAll(".card");
-const number = document.querySelector(".header__number");
+  addUnreadStyling(cards);
+  displayUnreadTotal(cards, unreadTotal);
 
-button.addEventListener("click", () => {
-  cards.forEach((card) => {
-    const cardText = card.children[1].children[0];
-    if (card.classList.contains("unread")) {
-      card.classList.remove("unread");
-      cardText.classList.remove("card__text--dot");
-      number.textContent = "0";
-    }
+  //Handles clicking of mark all as read
+  markRead.addEventListener("click", () => {
+    cards.forEach((card) => {
+      const cardText = card.children[1].children[0];
+
+      //If card contains unread class removes all styling on click
+      if (card.classList.contains("unread")) {
+        card.classList.remove("unread");
+        card.style.backgroundColor = "#ffffff";
+        cardText.classList.remove("card__text--dot");
+        unreadTotal.textContent = "0";
+      }
+    });
   });
-});
+})();
